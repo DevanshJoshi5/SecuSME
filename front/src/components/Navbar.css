@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a2a44;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Vertically center the items in the nav-links */
+}
+
+.nav-links li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center; /* Ensure the li items are centered vertically */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1; /* Normalize line-height */
+  display: inline-block; /* Ensure consistent rendering */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1; /* Match the line-height of the link */
+  display: inline-block; /* Ensure consistent rendering */
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,470 @@
+/* 🔹 Global Styles (unchanged) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* 🔹 Questionnaire Container (ensure base text color is white) */
+/* 🔹 Questionnaire Container */
+.questionnaire-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-top: 2cm;
+  background: #fff; /* Change to white background to match screenshot */
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow to match screenshot */
+  border: 1px solid #ddd; /* Add border to match screenshot */
+  color: #333; /* Darker text for visibility on white background */
+}
+
+/* 🔹 Scan Results */
+.scan-results {
+  margin-top: 20px;
+  text-align: left;
+  color: #333; /* Darker text for visibility on white background */
+}
+
+.scan-category {
+  background: #fff; /* Change to white background to match screenshot */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #ddd; /* Add border to match screenshot */
+  transition: transform 0.3s ease;
+  color: #333; /* Darker text for visibility */
+}
+
+.scan-category:hover {
+  transform: translateY(-5px);
+}
+
+.scan-category h3 {
+  margin-bottom: 10px;
+  color: #ff4b2b; /* Keep the red-orange for category titles */
+  font-size: 1.4rem;
+}
+
+.scan-category p {
+  color: #333; /* Darker text for visibility */
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Question Box */
+.question-box {
+  background: #fff; /* Change to white background */
+  padding: 25px;
+  border-radius: 15px;
+  color: #333; /* Darker text for visibility */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #ddd; /* Add border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-box p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333; /* Darker text */
+}
+
+/* 🔹 Button Styles (already matching screenshot) */
+button {
+  background: linear-gradient(135deg, #4caf50, #45a049); /* Green gradient from screenshot */
+  color: #ffffff;
+  padding: 12px 25px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: scale(1.05);
+}
+.risk-score-container {
+  background: #112240;
+  padding: 25px;
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.risk-score-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.risk-score-container p54
+{
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #d1d1e0;
+}
+
+.risk-score-container h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #ff4b2b;
+}
+
+/* 🔹 Other Existing Styles (unchanged) */
+.progress-bar {
+  width: 100%;
+  background: #2c2c3e;
+  border-radius: 8px;
+  height: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+  height: 15px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+.gauge-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.gauge-score {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff4b2b;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.results-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #1e1e2f;
+  border-radius: 15px;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.results-container h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.results-container h3 {
+  font-size: 1.6rem;
+  margin: 20px 0;
+  color: #ff4b2b;
+  text-align: center;
+}
+
+.results-container p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #d1d1e0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #112240;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.results-container p:hover {
+  transform: translateY(-3px);
+}
+
+.error-message {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.error-message button {
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.error-message button:hover {
+  background: linear-gradient(135deg, #c82333, #b5202d);
+  transform: scale(1.05);
+}
+
+.navigation {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.navigation button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navigation button:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #112240;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.login-container h2,
+.register-container h2 {
+  color: #ff4b2b;
+  text-align: center;
+}
+
+.login-container input,
+.register-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-container button,
+.register-container button {
+  background: #ff4b2b;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+  background: #e04326;
+}
+
+.error {
+  color: #ff4b2b;
+  text-align: center;
+}
+
+.logout-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.logout-container button {
+  background: #ff4b2b;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-container button:hover {
+  background: #e04326;
+}
+.questionnaire-container, .scan-container {
+  padding: 2rem;
+  text-align: center;
+  background: #fff; /* Ensure white background */
+}
+
+.question-box, .scan-results {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff; /* White background as in screenshot */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd; /* Add border to match screenshot */
+}
+
+.question {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.question p {
+  margin: 0 0 0.5rem;
+  color: #333; /* Darker text for visibility */
+}
+
+.question label {
+  display: block;
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745; /* Green to match screenshot */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.scan-category {
+  margin: 1rem 0;
+}
+
+.scan-category h4 {
+  margin: 0.5rem 0;
+}
+.results-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px; /* Add margin to account for the fixed Navbar height */
+  background-color: #2a3b5a; /* Match the dark background from the screenshot */
+  color: white;
+  border-radius: 8px;
+}
+
+/* Ensure the error message and other content also respect the margin */
+.error-message {
+  margin-top: 60px; /* Ensure error message is also pushed down */
+}
+
+/* Style for the loading message */
+.results-container p {
+  text-align: center;
+}
+
+/* Style for headings and paragraphs */
+.results-container h2,
+.results-container h3,
+.results-container h4,
+.results-container p {
+  margin: 10px 0;
+}
+.results-container {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: #2a3b5a !important; /* Force background color */
+  color: white !important; /* Force text color */
+  border-radius: 8;
+}
+.extensions-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.extension-card {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.extension-image {
+  width: 140px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.extension-details h3 {
+  margin-top: 0;
+}
+
+.extension-details a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.install-instructions {
+  margin-top: 40px;
+  background: #f0f8ff;
+  padding: 20px;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+}

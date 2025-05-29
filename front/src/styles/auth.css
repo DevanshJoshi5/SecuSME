@@ -1,0 +1,148 @@
+/* Reset for Consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #112240; /* Matches Testimonials background */
+  padding: 60px 20px; /* Matches Testimonials padding */
+  font-family: 'Arial', sans-serif;
+}
+
+.auth-card {
+  background: #0A192F; /* Matches Testimonial background */
+  border-radius: 10px; /* Matches Testimonial */
+  box-shadow: 0px 5px 15px rgba(100, 255, 218, 0.2); /* Matches Testimonial shadow */
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  transition: 0.3s ease-in-out; /* Matches Testimonial transition */
+}
+
+.auth-card:hover {
+  transform: scale(1.02); /* Slight scale on hover, less aggressive than Testimonial */
+  box-shadow: 0px 8px 20px rgba(100, 255, 218, 0.3);
+}
+
+.auth-card h2 {
+  color: #64FFDA; /* Matches Testimonial h2 */
+  font-size: 36px; /* Matches Testimonial h2 */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-card p {
+  color: #d1d1d1; /* Matches Testimonial p */
+  font-size: 16px; /* Matches Testimonial p */
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: #64FFDA; /* Matches Testimonial h4 */
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #64FFDA; /* Matches Testimonial-img border */
+  border-radius: 10px; /* Matches Testimonial */
+  background: #112240; /* Matches Testimonials background */
+  color: #ffffff; /* White text for contrast */
+  font-size: 16px; /* Matches Testimonial p */
+  transition: all 0.3s ease-in-out; /* Matches Testimonial */
+}
+
+.form-group input:focus {
+  border-color: #1B98F5; /* Matches Testimonial hover */
+  box-shadow: 0 0 10px rgba(27, 152, 245, 0.5); /* Blue glow */
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #64748b; /* Softer gray for placeholder */
+  opacity: 0.8;
+}
+
+.auth-button {
+  background: #64FFDA; /* Matches Testimonial h2 */
+  color: #0A192F; /* Dark text for contrast */
+  padding: 14px;
+  border: none;
+  border-radius: 10px; /* Matches Testimonial */
+  font-size: 18px; /* Matches Testimonial h4 */
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out; /* Matches Testimonial */
+  box-shadow: 0px 5px 15px rgba(100, 255, 218, 0.2); /* Matches Testimonial */
+}
+
+.auth-button:hover {
+  background: #1B98F5; /* Matches Testimonial hover */
+  color: #ffffff; /* White text on hover */
+  transform: scale(1.05); /* Matches Testimonial hover */
+  box-shadow: 0px 8px 20px rgba(27, 152, 245, 0.4);
+}
+
+.error {
+  color: #64FFDA; /* Matches Testimonial h2 */
+  background: rgba(100, 255, 218, 0.1); /* Faint teal background */
+  margin-bottom: 20px;
+  font-size: 16px; /* Matches Testimonial p */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #64FFDA;
+}
+
+.auth-link {
+  margin-top: 20px;
+  color: #d1d1d1; /* Matches Testimonial p */
+  font-size: 16px; /* Matches Testimonial p */
+}
+
+.auth-link a {
+  color: #64FFDA; /* Matches Testimonial h2 */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out; /* Matches Testimonial */
+}
+
+.auth-link a:hover {
+  color: #1B98F5; /* Matches Testimonial hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px;
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .auth-card h2 {
+    font-size: 28px;
+  }
+
+  .auth-button {
+    font-size: 16px;
+  }
+}

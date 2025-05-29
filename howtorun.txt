@@ -1,0 +1,9 @@
+backend cd server
+node src/server.js
+
+frontend cd front 
+npm start 
+
+database python app.py 
+check mongodb compass
+(Invoke-RestMethod -Uri "http://localhost:5000/api/register" -Method Post -ContentType "application/json" -Body '{"username":"testuser","password":"test123"}')

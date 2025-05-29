@@ -1,0 +1,158 @@
+/* 🔹 Dashboard Container */
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e1e2f, #112240);
+    border-radius: 15px;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-container h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ff4b2b;
+    text-align: center;
+  }
+  
+  /* 🔹 Risk Breakdown */
+  .dashboard-container .risk-breakdown {
+    background: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-container .risk-breakdown:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dashboard-container .risk-breakdown p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #d1d1e0;
+    padding: 10px;
+    border-radius: 8px;
+    background: #1e1e2f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dashboard-container .risk-breakdown p::before {
+    content: "🔍";
+    font-size: 1.2rem;
+    color: #ff4b2b;
+  }
+  
+  /* 🔹 Risk Mitigation */
+  .dashboard-container .mitigation-steps {
+    background: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-container .mitigation-steps:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dashboard-container .mitigation-steps ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dashboard-container .mitigation-steps li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #d1d1e0;
+    padding: 10px;
+    border-radius: 8px;
+    background: #1e1e2f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-container .mitigation-steps li:hover {
+    transform: translateX(5px);
+  }
+  
+  .dashboard-container .mitigation-steps li::before {
+    content: "⚠️";
+    font-size: 1.2rem;
+    color: #ff4b2b;
+  }
+  
+  /* 🔹 Compliance Recommendations */
+  .dashboard-container .compliance-recommendations {
+    background: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-container .compliance-recommendations:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dashboard-container .compliance-recommendations ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dashboard-container .compliance-recommendations li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #d1d1e0;
+    padding: 10px;
+    border-radius: 8px;
+    background: #1e1e2f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-container .compliance-recommendations li:hover {
+    transform: translateX(5px);
+  }
+  
+  .dashboard-container .compliance-recommendations li::before {
+    content: "📋";
+    font-size: 1.2rem;
+    color: #ff4b2b;
+  }
+  
+  /* 🔹 Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

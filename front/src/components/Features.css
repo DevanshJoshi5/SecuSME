@@ -1,0 +1,51 @@
+.features {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0A192F;
+    color: white;
+  }
+  
+  .features h2 {
+    font-size: 36px;
+    color: #64FFDA;
+    margin-bottom: 30px;
+  }
+  
+  .feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background: #112240;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 255, 200, 0.2);
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.08);
+    background: #1B98F5;
+  }
+  
+  .feature-icon {
+    font-size: 50px;
+    color: #64FFDA;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3 {
+    font-size: 22px;
+    color: #64FFDA;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    color: #d1d1d1;
+  }
+  
