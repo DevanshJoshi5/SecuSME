@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from 'jwt-decode';  // Updated import
+import { jwtDecode } from 'jwt-decode';
 import '../styles/auth.css';
 
 const Login = ({ setUser }) => {
@@ -13,8 +13,7 @@ const Login = ({ setUser }) => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // ✅ Get backend URL from .env (VITE_API_URL)
-  const API_BASE_URL = import.meta.env.VITE_API_URL;
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,6 +27,7 @@ const Login = ({ setUser }) => {
       setUser({ username });
       navigate('/landing');
     } catch (err) {
+      console.error(err);
       setError(t('invalid_credentials'));
     }
   };
