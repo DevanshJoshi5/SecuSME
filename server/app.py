@@ -18,7 +18,8 @@ app.config['JWT_SECRET_KEY'] = 'your-secret-key'
 jwt = JWTManager(app)
 
 # Configure CORS to allow requests from http://localhost:3000, including preflight (OPTIONS) requests
-CORS(app, supports_credentials=True, origins=["https://secusme.vercel.app"])
+CORS(app,support_credentials=True,origins=["http://localhost:3000", "https://secu-sme.vercel.app"])
+
 
 client = pymongo.MongoClient("mongodb+srv://admin:admin123@cluster0.vderj.mongodb.net/secusme?retryWrites=true&w=majority&appName=Cluster0")
 db = client["secusme"]
