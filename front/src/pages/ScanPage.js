@@ -42,22 +42,22 @@ const ScanPage = () => {
         },
       };
 
-      const sessionId = "initial_scan"; // You can dynamically generate session ID if needed
+      const sessionId = "initial_scan";
 
       const networkRes = await axios.post(
-        `${API_BASE_URL}/api/scan/network`,
+        `${apiURL}/api/scan/network`,
         { session_id: sessionId },
         config
       );
 
       const endpointRes = await axios.post(
-        `${API_BASE_URL}/api/scan/endpoint`,
+        `${apiURL}/api/scan/endpoint`,
         { session_id: sessionId },
         config
       );
 
       const dataRes = await axios.post(
-        `${API_BASE_URL}/api/scan/data`,
+        `${apiURL}/api/scan/data`,
         { session_id: sessionId },
         config
       );
@@ -71,7 +71,7 @@ const ScanPage = () => {
       setScanResults(results);
 
       await axios.post(
-        `${API_BASE_URL}/api/save_results`,
+        `${apiURL}/api/save_results`,
         {
           session_id: sessionId,
           network_score: results.network,
