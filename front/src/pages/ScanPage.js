@@ -13,10 +13,11 @@ const ScanPage = () => {
   });
   const [scanning, setScanning] = useState(false);
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL || process.env.REACT_APP_API_URL;
+
   const performScan = async () => {
     setScanning(true);
     const token = localStorage.getItem("token");
-    console.log("Token for performScan:", token);
 
     if (!token) {
       console.log("No token found, redirecting to login");
@@ -41,28 +42,25 @@ const ScanPage = () => {
         },
       };
 
-      const sessionId = "initial_scan"; // Or generate a unique session ID
+      const sessionId = "initial_scan"; // You can dynamically generate session ID if needed
 
       const networkRes = await axios.post(
-        "http://localhost:5000/api/scan/network",
+        `${API_BASE_URL}/api/scan/network`,
         { session_id: sessionId },
         config
       );
-      console.log("Network scan response:", networkRes.data);
 
       const endpointRes = await axios.post(
-        "http://localhost:5000/api/scan/endpoint",
+        `${API_BASE_URL}/api/scan/endpoint`,
         { session_id: sessionId },
         config
       );
-      console.log("Endpoint scan response:", endpointRes.data);
 
       const dataRes = await axios.post(
-        "http://localhost:5000/api/scan/data",
+        `${API_BASE_URL}/api/scan/data`,
         { session_id: sessionId },
         config
       );
-      console.log("Data scan response:", dataRes.data);
 
       const results = {
         network: networkRes.data.score || 0,
@@ -72,8 +70,8 @@ const ScanPage = () => {
 
       setScanResults(results);
 
-      const saveResponse = await axios.post(
-        "http://localhost:5000/api/save_results",
+      await axios.post(
+        `${API_BASE_URL}/api/save_results`,
         {
           session_id: sessionId,
           network_score: results.network,
@@ -82,9 +80,7 @@ const ScanPage = () => {
         },
         config
       );
-      console.log("Save scan results response:", saveResponse.data);
 
-      // Redirect to QuestionnairePage after scan completes
       navigate("/questionnaire", {
         state: { sessionId, scanScores: results },
       });
@@ -94,7 +90,6 @@ const ScanPage = () => {
         status: error.response?.status,
       });
       if (error.response?.status === 401) {
-        console.log("Unauthorized, redirecting to login");
         localStorage.removeItem("token");
         window.location.href = "/login";
       }
@@ -118,15 +113,13 @@ const ScanPage = () => {
           <div className="scan-category">
             <h4>Network Scan</h4>
             <p>
-              Score:{" "}
-              {scanResults.network !== null ? scanResults.network : "Pending"} / 10
+              Score: {scanResults.network !== null ? scanResults.network : "Pending"} / 10
             </p>
           </div>
           <div className="scan-category">
             <h4>Endpoint Scan</h4>
             <p>
-              Score:{" "}
-              {scanResults.endpoint !== null ? scanResults.endpoint : "Pending"} / 10
+              Score: {scanResults.endpoint !== null ? scanResults.endpoint : "Pending"} / 10
             </p>
           </div>
           <div className="scan-category">
