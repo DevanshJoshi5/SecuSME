@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/register", formData);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/register`, formData);
       navigate("/login");
     } catch (err) {
       if (err.response && err.response.status === 400) {
