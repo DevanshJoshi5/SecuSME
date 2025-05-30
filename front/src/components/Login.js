@@ -5,16 +5,21 @@ import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';  // Updated import
 import '../styles/auth.css';
+
 const Login = ({ setUser }) => {
   const { t } = useTranslation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  // ✅ Get backend URL from .env (VITE_API_URL)
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post(`${API_BASE_URL}/api/login`, {
         username,
         password,
       });
@@ -26,6 +31,7 @@ const Login = ({ setUser }) => {
       setError(t('invalid_credentials'));
     }
   };
+
   const handleGoogleLoginSuccess = (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
@@ -90,7 +96,7 @@ const Login = ({ setUser }) => {
             onError={handleGoogleLoginError}
           />
         </div>
-        
+
         <p className="auth-link">
           {t('dont_have_account')} <a href="/register">{t('register')}</a>
         </p>
