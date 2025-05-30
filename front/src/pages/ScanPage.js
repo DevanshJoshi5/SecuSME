@@ -13,6 +13,7 @@ const ScanPage = () => {
   });
   const [scanning, setScanning] = useState(false);
 
+  // ✅ Correctly read the API URL from environment variables
   const apiURL = import.meta.env.VITE_API_URL;
 
   const performScan = async () => {
@@ -42,7 +43,7 @@ const ScanPage = () => {
         },
       };
 
-      const sessionId = "initial_scan";
+      const sessionId = "initial_scan"; // Static or dynamic session ID
 
       const networkRes = await axios.post(
         `${apiURL}/api/scan/network`,
